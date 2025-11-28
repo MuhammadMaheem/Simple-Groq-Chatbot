@@ -42,7 +42,7 @@ Follow these steps to get the chatbot running locally:
    ```bash
    git clone https://github.com/MuhammadMaheem/Simple-Groq-Chatbot.git
    cd Simple-Groq-Chatbot
-````
+  ```
 
 2. **Install required Python packages**:
    Create a virtual environment and install the necessary dependencies.
@@ -99,10 +99,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or feedback, feel free to reach out to Muhammad Maheem at [[your-email@example.com](mailto:your-email@example.com)].
 
-```
-
 ### Notes:
 - Replace `your-groq-api-key` with your actual API key from Groq.
 - Feel free to adjust the contact email if necessary.
 - You can add more specific setup or troubleshooting instructions as needed based on your development environment.
-```

@@ -85,6 +85,54 @@ Follow these steps to get the chatbot running locally:
 * **`requirements.txt`**: Python dependencies for the project (Flask, Groq, etc.).
 * **`.env`**: Environment file to store the Groq API key (not included in the repository for security reasons).
 
+## Deployment on Render
+
+This application can be easily deployed on Render. Follow these steps:
+
+### Prerequisites
+- A Render account (sign up at [render.com](https://render.com))
+- Your Groq API key
+
+### Deployment Steps
+
+1. **Connect your repository**:
+   - Go to [render.com](https://render.com) and sign in
+   - Click "New +" and select "Web Service"
+   - Connect your GitHub repository
+
+2. **Configure the service**:
+   - **Name**: Choose a name for your service (e.g., `flask-chatbot`)
+   - **Runtime**: Python 3
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `gunicorn app:app`
+
+3. **Set environment variables**:
+   - In the Render dashboard, go to your service settings
+   - Add environment variable: `GROQ_API_KEY` with your actual API key
+   - Optionally add: `FLASK_ENV=production`
+
+4. **Deploy**:
+   - Click "Create Web Service"
+   - Render will build and deploy your application
+   - Once deployed, you'll get a URL where your chatbot is live
+
+### Troubleshooting
+
+If you encounter deployment issues:
+
+1. **Check the build logs** in Render dashboard for any error messages
+2. **Verify your requirements.txt** has compatible package versions
+3. **Ensure your GROQ_API_KEY** is set correctly in environment variables
+4. **Check that all files** are committed and pushed to your repository
+
+### Alternative Deployment
+
+You can also deploy using the `render.yaml` file included in this repository:
+
+1. Commit the `render.yaml` file to your repository
+2. In Render, select "Blueprint" instead of "Web Service" when creating a new service
+3. Render will automatically configure your service based on the blueprint
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -10,3 +10,6 @@ venv/
 .env.local
 .DS_Store
 
+# Generated files
+README_Documentation.docx
+

@@ -84,6 +84,18 @@ Follow these steps to get the chatbot running locally:
 * **`app.py`**: The Flask backend that handles user input, interacts with the Groq API, and serves the frontend.
 * **`requirements.txt`**: Python dependencies for the project (Flask, Groq, etc.).
 * **`.env`**: Environment file to store the Groq API key (not included in the repository for security reasons).
+* **`convert_readme_to_word.py`**: Python script to convert this README to a Word document.
+* **`README_Documentation.docx`**: Generated Word document version of this README (created by the conversion script).
+
+## Generate Word Document
+
+To create a Word document version of this README:
+
+```bash
+python convert_readme_to_word.py
+```
+
+This will generate `README_Documentation.docx` with proper formatting for headers, lists, and code blocks.
 
 ## Deployment on Render
 
